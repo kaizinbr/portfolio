@@ -3,7 +3,7 @@ import 'dotenv/config'
 
 import path from 'path';
 import {fileURLToPath} from 'url';
-import  Banner from './database/get-banner-data.js';
+// import  Banner from './database/get-banner-data.js';
 
 const __filename = fileURLToPath(import.meta.url);
 

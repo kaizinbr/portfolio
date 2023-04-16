@@ -5,10 +5,119 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./resources/css/index.css">
+    <link rel="stylesheet" type="text/css" href="./resources/fonts/sf-mono-cufonfonts-webfont/style.css"/>
+    <!-- <link rel="stylesheet" href="./resources/css/gradient.css"> -->
     <title>Document</title>
 </head>
 <body>
-    <img src="./resources/img/logo-name.png" alt="">
-    <h1>hello world</h1>
+    
+    <header>
+        <nav>
+            <picture>
+                <img id="symbol" class="logo" src="./resources/img/logo.svg" alt="">
+                <img id="name" class="logo" src="resources/img/kaizin.svg" alt="">
+            </picture>
+            
+            <ul>
+                <li class="hover-it">
+                    <a href="#" class="main-link">
+                        <span>
+                            #Home
+                        </span>    
+                    </a>
+                </li>
+                <li class="hover-it">
+                    <a href="#" class="main-link">
+                        <span>
+                            .sobre( )
+                        </span>    
+                    </a>
+                </li>
+                <li class="hover-it">
+                    <a href="#" class="main-link">
+                        <span>
+                            .contato( )
+                        </span>    
+                    </a>
+                </li>
+            </ul>
+            <!-- <img src="./resources/img/kaizin.svg" alt=""> -->
+        </nav>
+    </header>
+    <div class="h-bg"></div>
+                <!-- <div class="cursor"></div> -->
+
+    <main>
+        <div class="container">
+            <div class="content">
+                <h1>Olá, eu sou o Kaizin</h1>
+                <p>Um desenvolvedor web que ama o que faz</p>
+                <a href="#">Saiba mais</a>
+            </div>
+            <div class="img">
+                <div class="code-box">
+                    <code>
+                        <span class="code-const">const</span> <span class="code-name">kaizin</span> = <span class="code-obj">new</span> <span class="code-obj">Object</span>( );<br>
+                    </code>
+                </div>
+                <div class="gradient"></div>
+                <!-- <img src="resources/img/kaizin.png" id="perspective" alt=""> -->
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const navbar = document.querySelector("nav");
+        window.onscroll = ()=> {
+            this.scrollY > 20 ? navbar.classList.add("scrolled") : navbar.classList.remove("scrolled");
+        }
+
+
+        
+(function () {
+
+const link = document.querySelectorAll('.main-link');
+const cursor = document.querySelector('.cursor');
+
+const animateit = function (e) {
+      const span = this.querySelector('span');
+      const { offsetX: x, offsetY: y } = e,
+      { offsetWidth: width, offsetHeight: height } = this,
+
+      move = 10,
+      xMove = x / width * (move * 2) - move,
+      yMove = y / height * (move * 2) - move;
+
+      span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+      if (e.type === 'mouseleave') span.style.transform = '';
+};
+
+function changeLogo () {
+    const symbol = document.querySelector('#symbol');
+    const name = document.querySelector('#name');
+    if (window.scrollY > 20) {
+        // symbol.style.display = 'none';
+        name.style.opacity = '0';
+    } else {
+        // symbol.style.display = 'block';
+        name.style.opacity = '1';
+    }
+}
+
+window.addEventListener('scroll', changeLogo);
+
+const editCursor = e => {
+      const { clientX: x, clientY: y } = e;
+      cursor.style.left = x + 'px';
+      cursor.style.top = y + 'px';
+};
+
+link.forEach(b => b.addEventListener('mousemove', animateit));
+link.forEach(b => b.addEventListener('mouseleave', animateit));
+// window.addEventListener('mousemove', editCursor);
+
+})();
+    </script>
 </body>
 </html>
