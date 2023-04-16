@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./resources/css/index.css">
-    <link rel="stylesheet" type="text/css" href="./resources/fonts/sf-mono-cufonfonts-webfont/style.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="./resources/fonts/sf-mono-cufonfonts-webfont/style.css" />
     <!-- <link rel="stylesheet" href="./resources/css/gradient.css"> -->
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <header>
         <nav>
             <picture>
                 <img id="symbol" class="logo" src="./resources/img/logo.svg" alt="">
                 <img id="name" class="logo" src="resources/img/kaizin.svg" alt="">
             </picture>
-            
+
             <ul>
                 <li class="hover-it">
                     <a href="#" class="main-link">
                         <span>
                             #Home
-                        </span>    
+                        </span>
                     </a>
                 </li>
                 <li class="hover-it">
                     <a href="#" class="main-link">
                         <span>
                             .sobre( )
-                        </span>    
+                        </span>
                     </a>
                 </li>
                 <li class="hover-it">
                     <a href="#" class="main-link">
                         <span>
                             .contato( )
-                        </span>    
+                        </span>
                     </a>
                 </li>
             </ul>
@@ -45,79 +48,102 @@
         </nav>
     </header>
     <div class="h-bg"></div>
-                <!-- <div class="cursor"></div> -->
+    <!-- <div class="cursor"></div> -->
 
     <main>
         <div class="container">
             <div class="content">
-                <h1>Olá, eu sou o Kaizin</h1>
-                <p>Um desenvolvedor web que ama o que faz</p>
-                <a href="#">Saiba mais</a>
+                <span class="text">Olá, meu nome é</span>
+                <h1>Kaizin</h1>
+                <div class="desc">
+                    <p>Um estudante de Design Gráfico formado em Informática pelo IFPB. Meu maior interesse é
+                        Desenvolvimento Web e Web Design, e são nessas áreas que procuro uma oportunidade de primeiro
+                        emprego.</p>
+                    <a href="#about"><i class='bx bx-chevron-down'></i></a>
+                </div>
             </div>
             <div class="img">
                 <div class="code-box">
                     <code>
-                        <span class="code-const">const</span> <span class="code-name">kaizin</span> = <span class="code-obj">new</span> <span class="code-obj">Object</span>( );<br>
+                        <!-- <span class="code-const">const</span> <span class="code-name">kaizin</span> = <span class="code-obj">new</span> <span class="code-obj">Object</span>( );<br> -->
+                        <span class="code">const</span> <span class="const">kaizin</span> <span class="code">=</span> <span class="new">new</span> <span class="object">Object</span><span class="dot">()</span><span class="dot">;</span>
+                        <br><br>
+                        <span class="const">kaizin</span><span class="dot">.</span>head <span class="code">=</span> <span class="dot">{</span> <br><br>
+                            <span class="tab">  </span>name<span class="dot">:</span> <span class="string">'Kaizin'</span><span class="dot">,</span>
+                            <br>
+                            <span class="tab">  </span>brain<span class="dot">:</span> <span class="dot">[</span><span class="string">'dev'</span><span class="dot">,</span> <span class="string">'html'</span><span class="dot">,</span> <span class="string">'css'</span><span class="dot">,</span> <span class="string">'js'</span><span class="dot">,</span> <span class="string">'design'</span><span class="dot">,</span> <span class="string">'illustrator'</span><span class="dot">,</span> <span class="string">'photoshop'</span><span class="dot">]</span><span class="dot">,</span>
+                            <br>
+                            <span class="tab">  </span>goal<span class="dot">:</span> <span class="string">'job!'</span>
+                        }<span class="dot">;</span>
+                        <br><br>
+                        kaizin<span class="dot">.</span>heart <span class="code">=</span> <span class="dot">[</span><span class="string">'music🎧'</span><span class="dot">,</span> <span class="string">'art🎨'</span><span class="dot">,</span> <span class="string">'food😋'</span><span class="dot">,</span> <span class="string">'family🫂'</span><span class="dot">]</span><span class="dot">;</span>
+                        <br><br>
+                        kaizin<span class="dot">.</span>body <span class="code">=</span> <span class="string">'everything else...'</span><span class="dot">;</span>
+                        <br><br>
+                        <span class="const">console</span><span class="dot">.</span>log<span class="dot">(</span>kaizin<span class="dot">)</span><span class="dot">;</span>
+
+
                     </code>
                 </div>
                 <div class="gradient"></div>
                 <!-- <img src="resources/img/kaizin.png" id="perspective" alt=""> -->
             </div>
         </div>
+
+        <div class="about" id="about"></div>
     </main>
 
     <script>
         const navbar = document.querySelector("nav");
-        window.onscroll = ()=> {
+        window.onscroll = () => {
             this.scrollY > 20 ? navbar.classList.add("scrolled") : navbar.classList.remove("scrolled");
         }
 
+        (function () {
 
-        
-(function () {
+            const link = document.querySelectorAll('.main-link');
+            const cursor = document.querySelector('.cursor');
 
-const link = document.querySelectorAll('.main-link');
-const cursor = document.querySelector('.cursor');
+            const animateit = function (e) {
+                const span = this.querySelector('span');
+                const { offsetX: x, offsetY: y } = e,
+                    { offsetWidth: width, offsetHeight: height } = this,
 
-const animateit = function (e) {
-      const span = this.querySelector('span');
-      const { offsetX: x, offsetY: y } = e,
-      { offsetWidth: width, offsetHeight: height } = this,
+                    move = 10,
+                    xMove = x / width * (move * 2) - move,
+                    yMove = y / height * (move * 2) - move;
 
-      move = 10,
-      xMove = x / width * (move * 2) - move,
-      yMove = y / height * (move * 2) - move;
+                span.style.transform = `translate(${xMove}px, ${yMove}px)`;
 
-      span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+                if (e.type === 'mouseleave') span.style.transform = '';
+            };
 
-      if (e.type === 'mouseleave') span.style.transform = '';
-};
+            function changeLogo() {
+                const symbol = document.querySelector('#symbol');
+                const name = document.querySelector('#name');
+                if (window.scrollY > 20) {
+                    // symbol.style.display = 'none';
+                    name.style.opacity = '0';
+                } else {
+                    // symbol.style.display = 'block';
+                    name.style.opacity = '1';
+                }
+            }
 
-function changeLogo () {
-    const symbol = document.querySelector('#symbol');
-    const name = document.querySelector('#name');
-    if (window.scrollY > 20) {
-        // symbol.style.display = 'none';
-        name.style.opacity = '0';
-    } else {
-        // symbol.style.display = 'block';
-        name.style.opacity = '1';
-    }
-}
+            window.addEventListener('scroll', changeLogo);
 
-window.addEventListener('scroll', changeLogo);
+            const editCursor = e => {
+                const { clientX: x, clientY: y } = e;
+                cursor.style.left = x + 'px';
+                cursor.style.top = y + 'px';
+            };
 
-const editCursor = e => {
-      const { clientX: x, clientY: y } = e;
-      cursor.style.left = x + 'px';
-      cursor.style.top = y + 'px';
-};
+            link.forEach(b => b.addEventListener('mousemove', animateit));
+            link.forEach(b => b.addEventListener('mouseleave', animateit));
+            // window.addEventListener('mousemove', editCursor);
 
-link.forEach(b => b.addEventListener('mousemove', animateit));
-link.forEach(b => b.addEventListener('mouseleave', animateit));
-// window.addEventListener('mousemove', editCursor);
-
-})();
+        })();
     </script>
 </body>
+
 </html>

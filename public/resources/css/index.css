@@ -11,12 +11,24 @@
     --tigers-eye: #ad6c29ff;
     --citron: #d6cc7cff;
 
+    --jet: #333333ff;
+    --davys-gray: #5c5c5c;
     --fawn: #f7b97aff;
     --amethyst: #9966ccff;
     --lavender-floral: #af87d7ff;
     --thistle: #d7c1e9ff;
     --snow: #fffafaff;
+    
     /* https://coolors.co/9966cc-af87d7-fffafa */
+}
+
+::selection {
+    background-color: var(--lavender-floral);
+    color: var(--snow);
+}
+
+html, body {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -26,7 +38,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    color: var(--jet);
     overflow-x: hidden;
 }
 
@@ -38,7 +50,6 @@ body {
 
 h1 {
     font-size: 4rem;
-    color: #333;
     /* font-family:'SF Mono Regular'; */
 }
 
@@ -129,6 +140,7 @@ main {
      */
     position: relative;
     padding: 0 32px;
+    top: -55px;
 }
 
 .container {
@@ -137,16 +149,101 @@ main {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    height: 100%;
+    height: 100vh;
     min-height: 750px;
     width: 100%;
+    gap: 2rem;
 }
+
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    /* align-items: center; */
+    height: 100%;
+    width: 100%;
+    padding: 0 0 0 24px;
+    z-index: 3;
+}
+
+.content span.text{
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: 'SF Mono Regular';
+    color: var(--amethyst);
+    margin: 0;
+    padding: 0;
+}
+
+.content h1 {
+    font-size: 5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.content .desc {
+    max-width: 500px;
+}
+
+.content p {
+    line-height: 24px;
+    color: var(--davys-gray);
+    margin: 0;
+    padding: 0;
+}
+
+
+.desc a i {
+    color: var(--lavender-floral);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 4rem;
+    position: relative;
+    top: 32px;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    /* animation: .5s infinite alternate upanddown; */
+    animation: myAnim 7s ease 15s infinite normal forwards;
+}
+
+@keyframes myAnim {
+	0%,
+	30% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	5% {
+		transform: translateX(-30px) rotate(6deg);
+	}
+
+	10% {
+		transform: translateX(15px) rotate(-6deg);
+	}
+
+	15% {
+		transform: translateX(-15px) rotate(3.6deg);
+	}
+
+	20% {
+		transform: translateX(9px) rotate(-2.4deg);
+	}
+
+	25% {
+		transform: translateX(-6px) rotate(1.2deg);
+	}
+}
+
+
 
 .img {
     position: relative;
     width: 50%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     
@@ -164,20 +261,59 @@ main {
     z-index: 3;
 }
 
-.code-box code * {
+.code-box code *, code {
     font-size: 1rem;
-    color: #333;
     font-family: 'SF Mono Regular';
+}
 
+code {
+    color: var(--mint);
+}
+
+.const {
+    color: #e06c75;
+}
+
+.code {
+    color: #d9b36d;
+}
+
+.new {
+    color: #61afef;
+    font-weight: 800;
+}
+
+.object {
+    color: #98c379;
+    font-style: italic;
+}
+
+.string {
+    color: var(--amethyst);
+}
+
+.dot{
+    color: #6272a4;
+}
+
+.tab {
+    color: #6272a4;
+    width: 24px;
 }
 
 .main-link {
     transition: all 0.3s ease;
 }
 
+.main-link:hover {
+    color: var(--lavender-floral);
+}
+
+/* GRADIENTE DE FUNDO */
+
 span {
     display: inline-block;
-    pointer-event: none;
+    /* pointer-event: none; */
     transition: transform 0.1s linear;
 }
 
