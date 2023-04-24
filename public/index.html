@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="resources/img/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./resources/css/index.css">
+    <link rel="stylesheet" href="./resources/css/modal.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="./resources/fonts/sf-mono-cufonfonts-webfont/style.css" />
     <!-- <link rel="stylesheet" href="./resources/css/gradient.css"> -->
-    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Kaizin</title>
 </head>
 
 <body>
@@ -18,28 +21,35 @@
         <nav>
             <picture>
                 <img id="symbol" class="logo" src="./resources/img/logo.svg" alt="">
-                <img id="name" class="logo" src="resources/img/kaizin.svg" alt="">
+                <!-- <img id="name" class="logo" src="resources/img/kaizin.svg" alt=""> -->
             </picture>
 
             <ul>
                 <li class="hover-it">
-                    <a href="#" class="main-link">
+                    <a href="#about" class="main-link">
                         <span>
-                            #Home
+                            .kai()
+                        </span>
+                    </a>
+                </li>
+                <li class="hover-it">
+                    <a href="#skills" class="main-link">
+                        <span>
+                            .habilidades()
+                        </span>
+                    </a>
+                </li>                
+                <li class="hover-it">
+                    <a href="#projects" class="main-link">
+                        <span>
+                            .projetos()
                         </span>
                     </a>
                 </li>
                 <li class="hover-it">
                     <a href="#" class="main-link">
                         <span>
-                            .sobre( )
-                        </span>
-                    </a>
-                </li>
-                <li class="hover-it">
-                    <a href="#" class="main-link">
-                        <span>
-                            .contato( )
+                            .contato()
                         </span>
                     </a>
                 </li>
@@ -51,47 +61,227 @@
     <!-- <div class="cursor"></div> -->
 
     <main>
-        <div class="container">
-            <div class="content">
-                <span class="text">Olá, meu nome é</span>
-                <h1>Kaizin</h1>
-                <div class="desc">
-                    <p>Um estudante de Design Gráfico formado em Informática pelo IFPB. Meu maior interesse é
-                        Desenvolvimento Web e Web Design, e são nessas áreas que procuro uma oportunidade de primeiro
-                        emprego.</p>
-                    <a href="#about"><i class='bx bx-chevron-down'></i></a>
+        <div class="main-container">
+            <div class="intro">
+                <div class="container">
+                    <div class="content">
+                        <span class="text">Olá, meu nome é</span>
+                        <h1>Kaizin</h1>
+                        <div class="desc">
+                            <p>Um estudante de Design Gráfico formado em Informática pelo IFPB. Meu maior interesse é
+                                Desenvolvimento Web e Web Design, e são nessas áreas que procuro uma oportunidade de primeiro
+                                emprego.</p>
+                            <a href="#about"><i class='bx bx-chevron-down'></i></a>
+                        </div>
+                    </div>
+                    <div class="intro-img">
+                        <div class="code-box">
+                            <code>
+                                <!-- <span class="code-const">const</span> <span class="code-name">kaizin</span> = <span class="code-obj">new</span> <span class="code-obj">Object</span>( );<br> -->
+                                <span class="code">const</span> <span class="const">kaizin</span> <span class="code">=</span> <span class="new">new</span> <span class="object">Object</span><span class="dot">()</span><span class="dot">;</span>
+                                <br><br>
+                                <span class="const">kaizin</span><span class="dot">.</span>head <span class="code">=</span> <span class="dot">{</span> <br><br>
+                                    <span class="tab">  </span>name<span class="dot">:</span> <span class="string">'Kaizin'</span><span class="dot">,</span>
+                                    <br>
+                                    <span class="tab">  </span>brain<span class="dot">:</span> <span class="dot">[</span><span class="string">'dev'</span><span class="dot">,</span> <span class="string">'html'</span><span class="dot">,</span> <span class="string">'css'</span><span class="dot">,</span> <span class="string">'js'</span><span class="dot">,</span> <span class="string">'design'</span><span class="dot">,</span> <span class="string">'illustrator'</span><span class="dot">,</span> <span class="string">'photoshop'</span><span class="dot">]</span><span class="dot">,</span>
+                                    <br>
+                                    <span class="tab">  </span>goal<span class="dot">:</span> <span class="string">'job!'</span>
+                                }<span class="dot">;</span>
+                                <br><br>
+                                kaizin<span class="dot">.</span>heart <span class="code">=</span> <span class="dot">[</span><span class="string">'music🎧'</span><span class="dot">,</span> <span class="string">'art🎨'</span><span class="dot">,</span> <span class="string">'food😋'</span><span class="dot">,</span> <span class="string">'family🫂'</span><span class="dot">]</span><span class="dot">;</span>
+                                <br><br>
+                                kaizin<span class="dot">.</span>body <span class="code">=</span> <span class="string">'everything else...'</span><span class="dot">;</span>
+                                <br><br>
+                                <span class="const">console</span><span class="dot">.</span>log<span class="dot">(</span>kaizin<span class="dot">)</span><span class="dot">;</span>
+                            </code>
+                        </div>
+                        <div class="gradient"></div>
+                        <!-- <img src="resources/img/kaizin.png" id="perspective" alt=""> -->
+                    </div>
                 </div>
             </div>
-            <div class="img">
-                <div class="code-box">
-                    <code>
-                        <!-- <span class="code-const">const</span> <span class="code-name">kaizin</span> = <span class="code-obj">new</span> <span class="code-obj">Object</span>( );<br> -->
-                        <span class="code">const</span> <span class="const">kaizin</span> <span class="code">=</span> <span class="new">new</span> <span class="object">Object</span><span class="dot">()</span><span class="dot">;</span>
-                        <br><br>
-                        <span class="const">kaizin</span><span class="dot">.</span>head <span class="code">=</span> <span class="dot">{</span> <br><br>
-                            <span class="tab">  </span>name<span class="dot">:</span> <span class="string">'Kaizin'</span><span class="dot">,</span>
-                            <br>
-                            <span class="tab">  </span>brain<span class="dot">:</span> <span class="dot">[</span><span class="string">'dev'</span><span class="dot">,</span> <span class="string">'html'</span><span class="dot">,</span> <span class="string">'css'</span><span class="dot">,</span> <span class="string">'js'</span><span class="dot">,</span> <span class="string">'design'</span><span class="dot">,</span> <span class="string">'illustrator'</span><span class="dot">,</span> <span class="string">'photoshop'</span><span class="dot">]</span><span class="dot">,</span>
-                            <br>
-                            <span class="tab">  </span>goal<span class="dot">:</span> <span class="string">'job!'</span>
-                        }<span class="dot">;</span>
-                        <br><br>
-                        kaizin<span class="dot">.</span>heart <span class="code">=</span> <span class="dot">[</span><span class="string">'music🎧'</span><span class="dot">,</span> <span class="string">'art🎨'</span><span class="dot">,</span> <span class="string">'food😋'</span><span class="dot">,</span> <span class="string">'family🫂'</span><span class="dot">]</span><span class="dot">;</span>
-                        <br><br>
-                        kaizin<span class="dot">.</span>body <span class="code">=</span> <span class="string">'everything else...'</span><span class="dot">;</span>
-                        <br><br>
-                        <span class="const">console</span><span class="dot">.</span>log<span class="dot">(</span>kaizin<span class="dot">)</span><span class="dot">;</span>
-
-
-                    </code>
+            <div class="about" id="about">
+                <div class="container">
+                    <div class="content">
+                        <h1>Sobre</h1>
+                        <p>Olá! Me chamo Kaio, ou <i>Kaizin</i>, tenho 17 anos e sou formado no Curso Técnico em Informática pelo IFPB. Desde criança sempre tive interesse por tecnologia, tanto hardware como software, e por isso escolhi o curso de Informática. No curso fui apresentado às linguagens Python, Javascript, HTML e CSS, e aí surgiu minha vontade de trabalhar com programação e desenvolvimento Web. Também aprendi a mexer com hardware, como montar computadores, verificar e trocar peças, e até um pouco sobre circuitos eletrônicos.</p>
+                        <br>
+                        <p>Tanto para coisas do curso quanto por interesse próprio, adquiri bastante conhecimento em Design, e essa foi outra área pela qual me interessei. Atualmente estou cursando o 1º período de Design Gráfico no IFPB, e estou em busca de uma oportunidade de primeiro emprego na área de Desenvolvimento Web ou semelhantes.</p>
+                    </div>
+                    <div class="img">
+                        <picture>
+                            <img id="avatar" src="resources/img/me.jpg" alt="">
+                        </picture>
+                    </div>
                 </div>
-                <div class="gradient"></div>
-                <!-- <img src="resources/img/kaizin.png" id="perspective" alt=""> -->
+            </div>
+            
+            <div class="skills" id="skills">
+                <div class="container">
+                    <div class="content">
+                        <h2>Algumas habilidades</h2>
+                        <div class="sections">
+                            <div id="dev-s" class="s-section">
+                                <h3 class="s-title">Dev</h3>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>Javascript</li>
+                                    <li>CSS</li>
+                                    <li>Bootstrap</li>
+                                    <li>Node.js</li>
+                                    <li>Express</li>
+                                    <li>SQLite</li>
+                                    <li>Código limpo</li>
+                                    <li>Responsividade</li>
+                                </ul>
+                            </div>
+                            <div id="social-s" class="s-section">
+                                <h3 class="s-title">Sociais</h3>
+                                <ul>
+                                    <li>Proativo</li>
+                                    <li>Organizado</li>
+                                    <li>Comunicativo</li>
+                                    <li>Paciente</li>
+                                    <li>Focado</li>
+                                    <li>Inglês intermediário</li>
+                                    <li>Conhecimentos gerais</li>
+                                </ul>
+                            </div>
+                            <div id="other-s" class="s-section">
+                                <h3 class="s-title">Outros</h3>
+                                <ul>
+                                    <li>Edição de vídeo</li>
+                                    <li>ESP32</li>
+                                    <li>Arduíno</li>
+                                    <li>Photoshop</li>
+                                    <li>Illustrator</li>
+                                    <li>Pacote Office</li>
+                                    <li>Montagem e manutenção de computadores</li>
+                                    <li>Redes de computadores</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+            <div class="projects" id="projects">
+                <div class="container">
+                    <h1>Projetos</h1>
+                    <div class="content">
+                        <div class="cards-box">
+
+                            <div class="p-card">
+                                <div class="p-img">
+                                    <img src="resources/img/projects/example.png" alt="">
+                                    <div class="show-modal">
+                                        <button href="" class="more">Ver mais <span class="material-symbols-outlined">
+                                            trending_flat
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-content">
+                                    <h4>Kaizin - portfólio</h4>
+                                    
+                                </div>
+                            </div>
+                            <div class="p-card">
+                                <div class="p-img">
+                                    <img src="resources/img/projects/example.png" alt="">
+                                    <div class="show-modal">
+                                        <button href="" class="more">Ver mais <span class="material-symbols-outlined">
+                                            trending_flat
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-content">
+                                    <h4>Meu site</h4>
+                                    
+                                </div>
+                            </div>
+                            <div class="p-card">
+                                <div class="p-img">
+                                    <img src="resources/img/projects/example.png" alt="">
+                                    <div class="show-modal">
+                                        <button href="" class="more">Ver mais <span class="material-symbols-outlined">
+                                            trending_flat
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-content">
+                                    <h4>Meu site</h4>
+                                    
+                                </div>
+                            </div>
+                            <div class="p-card">
+                                <div class="p-img">
+                                    <img src="resources/img/projects/example.png" alt="">
+                                    <div class="show-modal">
+                                        <button href="" class="more">Ver mais <span class="material-symbols-outlined">
+                                            trending_flat
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-content">
+                                    <h4>Meu site</h4>
+                                    
+                                </div>
+                            </div>
+                            <div class="p-card">
+                                <div class="p-img">
+                                    <img src="resources/img/projects/example.png" alt="">
+                                    <div class="show-modal">
+                                        <button href="" class="more">Ver mais <span class="material-symbols-outlined">
+                                            trending_flat
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-content">
+                                    <h4>Meu site</h4>
+                                    
+                                </div>
+                            </div>
+                            <div class="p-card">
+                                <div class="p-img">
+                                    <img src="resources/img/projects/example.png" alt="">
+                                    <div class="show-modal">
+                                        <button href="" class="more">Ver mais <span class="material-symbols-outlined">
+                                            trending_flat
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="p-content">
+                                    <h4>Meu site</h4>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="about" id="about"></div>
     </main>
+
+    <!-- <div class="overlay hide"></div> -->
+    <div class="modal-box hide">
+        <div class="close-modal">
+            <span class="material-symbols-outlined">
+                close
+            </span>
+        </div>
+        <div class="modal hide">
+
+        </div>
+    </div>
+    <script src="./resources/js/modal.js"></script>
 
     <script>
         const navbar = document.querySelector("nav");
@@ -118,19 +308,19 @@
                 if (e.type === 'mouseleave') span.style.transform = '';
             };
 
-            function changeLogo() {
-                const symbol = document.querySelector('#symbol');
-                const name = document.querySelector('#name');
-                if (window.scrollY > 20) {
-                    // symbol.style.display = 'none';
-                    name.style.opacity = '0';
-                } else {
-                    // symbol.style.display = 'block';
-                    name.style.opacity = '1';
-                }
-            }
+            // function changeLogo() {
+            //     const symbol = document.querySelector('#symbol');
+            //     const name = document.querySelector('#name');
+            //     if (window.scrollY > 20) {
+            //         // symbol.style.display = 'none';
+            //         name.style.opacity = '0';
+            //     } else {
+            //         // symbol.style.display = 'block';
+            //         name.style.opacity = '1';
+            //     }
+            // }
 
-            window.addEventListener('scroll', changeLogo);
+            // window.addEventListener('scroll', changeLogo);
 
             const editCursor = e => {
                 const { clientX: x, clientY: y } = e;
@@ -143,6 +333,12 @@
             // window.addEventListener('mousemove', editCursor);
 
         })();
+
+        // window.onload(
+        //     window.alert('cocacola machita cocacola machita see you lookin catch it here is your cola see you lookin catch it here is your cola cocacola machita cocacola machita see you lookin catch it here is your cola see you lookin catch it here is your cola')
+        // )
+
+        
     </script>
 </body>
 
